@@ -1,7 +1,7 @@
 import { Component, MouseEvent } from "react";
 
 interface IProps {
-  images: [];
+  images: string[];
 }
 
 class Carousel extends Component<IProps> {

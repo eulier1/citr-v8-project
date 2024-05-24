@@ -6,7 +6,6 @@ import Modal from "./Modal";
 import ErrorBoundary from "./ErrorBoundary";
 import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
-import { PetAPIResponse } from "./APIResponseTypes";
 
 const Details = () => {
   const { id } = useParams();
@@ -18,7 +17,7 @@ const Details = () => {
 
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-  const results = useQuery<PetAPIResponse>(["details", id], fetchPet);
+  const results = useQuery(["details", id], fetchPet);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, setAdoptedPet] = useContext(AdoptedPetContext);
 
